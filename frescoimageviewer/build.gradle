@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -25,7 +24,7 @@ android {
 
 }
 
-publish {
+/*publish {
     groupId = 'com.github.stfalcon'
     artifactId = 'frescoimageviewer'
     publishVersion = '0.5.0'
@@ -33,7 +32,9 @@ publish {
     licences = ['Apache-2.0']
     uploadName = 'FrescoImageViewer'
     website = 'https://github.com/stfalcon-studio/FrescoImageViewer.git'
-}
+}*/
+
+apply from: 'packaging_configuration.gradle'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
